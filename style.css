@@ -1,0 +1,811 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;500;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  background: url(img/FGO-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: #c7c7c7;
+}
+.container {
+  position: relative;
+}
+.container .card {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  background: #232323;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.container .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2f3f3e;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.container .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+.container .card:after {
+  content: "Servant: Avenger Class";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 10em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+.container .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.container .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(0%);
+}
+.container .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  width: 220px;
+  height: auto;
+}
+.container .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 0.1s;
+  z-index: 10;
+}
+.container .card:hover .contentBx {
+  height: 200px;
+}
+.container .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+.container .card:hover .contentBx h2 {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container .card .contentBx .item-condition,
+.container .card .contentBx .shipping-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.container .card:hover .contentBx .item-condition,
+.container .card:hover .contentBx .shipping-method {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container .card .contentBx .item-condition h3,
+.container .card .contentBx .shipping-method h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container .card .contentBx .item-condition span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container .card .contentBx .item-condition span:hover,
+.container .card .contentBx .shipping-method span:hover {
+  background: #2f3f3e;
+}
+.container .card .contentBx .shipping-method span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.container .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+/*---- Jalter goes down here ----*/
+.container2 {
+  position: relative;
+}
+.container2 .card {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  background: #232323;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.container2 .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #23173f;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.container2 .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+.container2 .card:after {
+  content: "Servant: Avenger Class";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 10em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+.container2 .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.container2 .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(0%);
+}
+.container2 .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  width: 350px;
+  height: auto;
+}
+.container2 .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 0.1s;
+  z-index: 10;
+}
+.container2 .card:hover .contentBx {
+  height: 200px;
+}
+.container2 .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+.container2 .card:hover .contentBx h2 {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container2 .card .contentBx .item-condition,
+.container2 .card .contentBx .shipping-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.container2 .card:hover .contentBx .item-condition,
+.container2 .card:hover .contentBx .shipping-method {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container2 .card .contentBx .item-condition h3,
+.container2 .card .contentBx .shipping-method h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container2 .card .contentBx .item-condition span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container2 .card .contentBx .item-condition span:hover,
+.container2 .card .contentBx .shipping-method span:hover {
+  background: #2f3f3e;
+}
+.container2 .card .contentBx .shipping-method span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container2 .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.container2 .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+/*----- Scathach goes down here ----------*/
+.container3 {
+  position: relative;
+}
+.container3 .card {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  background: #232323;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.container3 .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #520221;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.container3 .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+.container3 .card:after {
+  content: "Servant: Lancer Class";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 10em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+.container3 .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.container3 .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(0%);
+}
+.container3 .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -25%);
+  width: 300px;
+  height: auto;
+}
+.container3 .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 0.1s;
+  z-index: 10;
+}
+.container3 .card:hover .contentBx {
+  height: 200px;
+}
+.container3 .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+.container3 .card:hover .contentBx h2 {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container3 .card .contentBx .item-condition,
+.container3 .card .contentBx .shipping-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.container3 .card:hover .contentBx .item-condition,
+.container3 .card:hover .contentBx .shipping-method {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container3 .card .contentBx .item-condition h3,
+.container3 .card .contentBx .shipping-method h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container3 .card .contentBx .item-condition span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container3 .card .contentBx .item-condition span:hover,
+.container3 .card .contentBx .shipping-method span:hover {
+  background: #2f3f3e;
+}
+.container3 .card .contentBx .shipping-method span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container3 .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.container3 .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+/*----Nero Bride goes down here------*/
+.container4 {
+  position: relative;
+}
+.container4 .card {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  background: #232323;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.container4 .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.container4 .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+.container4 .card:after {
+  content: "Servant: Saber Class";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 10em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+.container4 .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.container4 .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(0%);
+}
+.container4 .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -25%);
+  width: 300px;
+  height: auto;
+}
+.container4 .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 0.1s;
+  z-index: 10;
+}
+.container4 .card:hover .contentBx {
+  height: 200px;
+}
+.container4 .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+.container4 .card:hover .contentBx h2 {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container4 .card .contentBx .item-condition,
+.container4 .card .contentBx .shipping-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.container4 .card:hover .contentBx .item-condition,
+.container4 .card:hover .contentBx .shipping-method {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container4 .card .contentBx .item-condition h3,
+.container4 .card .contentBx .shipping-method h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container4 .card .contentBx .item-condition span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container4 .card .contentBx .item-condition span:hover,
+.container4 .card .contentBx .shipping-method span:hover {
+  background: #2f3f3e;
+}
+.container4 .card .contentBx .shipping-method span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container4 .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.container4 .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+/*---- Tamamo goes down here -----*/
+.container5 {
+  position: relative;
+}
+.container5 .card {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  background: #232323;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.container5 .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fa9eeb;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.container5 .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+.container5 .card:after {
+  content: "Servant: Caster Class";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 10em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+.container5 .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.container5 .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(0%);
+}
+.container5 .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -25%);
+  width: 300px;
+  height: auto;
+}
+.container5 .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 0.1s;
+  z-index: 10;
+}
+.container5 .card:hover .contentBx {
+  height: 200px;
+}
+.container5 .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+.container5 .card:hover .contentBx h2 {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container5 .card .contentBx .item-condition,
+.container5 .card .contentBx .shipping-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.container5 .card:hover .contentBx .item-condition,
+.container5 .card:hover .contentBx .shipping-method {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container5 .card .contentBx .item-condition h3,
+.container5 .card .contentBx .shipping-method h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container5 .card .contentBx .item-condition span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container5 .card .contentBx .item-condition span:hover,
+.container5 .card .contentBx .shipping-method span:hover {
+  background: #2f3f3e;
+}
+.container5 .card .contentBx .shipping-method span {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container5 .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.container5 .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
