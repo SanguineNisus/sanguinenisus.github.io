@@ -855,6 +855,10 @@ Primary use:	Showcase Portfolio
 	.row_padding_all {
 		padding:8vw;
 	}
+
+	.row_padding_partial {
+		padding-top:2vw;
+	}
 	
 	main {
 		-webkit-transition: background 0.5s ease-in-out 0s;
